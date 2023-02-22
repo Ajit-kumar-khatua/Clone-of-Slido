@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    height: 70px;
+    /* border: 1px solid red; */
+    background-color: #2339b8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+}
+#navbar #child1{
+    width: 30%;
+    margin-left: 10%;
+    /* border: 1px solid red; */
+}
+
+#navbar #child1 a{
+    color: white;
+    text-decoration: none;
+}
+#navbar #child2{
+    /* width: 60%; */
+    margin-right: 10%;
+}
+#navbar #child2 a{
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+#search{
+    height: 35px;
+    width:200px;
+    background:  hsla(0, 0%, 99%, 0.863);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding-left: 15px;
+}
+#child2 button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 19px;
+    color: #2339b8;
+    font-weight: bold;
+}
+#events{
+    height: 50px;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#events div{
+    margin-left: 7%;
+}
+#events div button{
+    margin-left: 40px;
+    border: none;
+    background-color: white;
+    font-size: 17px;
+    padding-top: 17px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+#active-events{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5%;
+}
+#active-events #child1 h2{
+    margin-left: 20px;
+    font-size: 22px;
+    color: grey;
+}
+#active-events #child1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#create-poll{
+    height: 40px;
+    width: 170px;
+    background-color: rgb(55, 209, 55);
+    border: none;
+    color: white;
+    font-size: 19px;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+#active-events #child2{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+    height: auto;
+    border-radius: 15px;
+}
+#active-events #child2 .all-polls{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.all-polls div{
+    margin-left: 20px;
+}
+.event-delete{
+    margin-left: 80%;
+}
+
+.all-polls #name{
+    font-weight: bold;
+}
+.all-polls #code{
+    margin-left: 10px;
+    color: grey;
+}
+#calender{
+    margin-left: 10px;
+}
+#active-events h3{
+    margin: 30px 0px 30px 0px;
+    color: rgb(94, 93, 93);
+}
+#active-events #child3{
+     height: 150px;
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+}
+#active-events #child3 div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 7px;
+}
+#active-events #child3 div button{
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 50%;
+    margin: 10% 10% 10% 40%;
+}
+#active-events #child3 div p{
+    text-align: center;
+}
+#active-events #child3 div button img{
+    height: 40px;
+}
