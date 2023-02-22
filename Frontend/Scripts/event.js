@@ -42,7 +42,7 @@ function displayEvents(data){
             <div>
                 <span id="name">${elem.name}</span>
                 <span id="code">#${elem.code}</span>
-                <p>startdate</p>
+                <p>${elem.start}</p>
             </div>
             <button class="event-delete"><i class="fa-solid fa-trash"></i></button>
         </div>
