@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: Roboto,sans-serif;
+}
 #navbar{
     height: 70px;
     /* border: 1px solid red; */
@@ -37,10 +40,11 @@
     height: 35px;
     width:200px;
     background:  hsla(0, 0%, 99%, 0.863);
-    color: white;
+    color: black;
     border: none;
     border-radius: 7px;
     padding-left: 15px;
+    font-size: 19px;
 }
 #child2 button{
     height: 40px;
@@ -69,10 +73,13 @@
     padding-bottom: 10px;
 }
 #active-events{
+    position: relative;
     width: 80%;
     height: auto;
-    margin: auto;
+    margin: 0 5% 5% 10%;
     margin-bottom: 5%;
+
+   
 }
 #active-events #child1 h2{
     margin-left: 20px;
@@ -94,6 +101,9 @@
     border-radius: 7px;
     margin-right: 20px;
 }
+#create-poll:hover{
+    cursor: pointer;
+}
 #active-events #child2{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 20px;
@@ -102,14 +112,23 @@
 }
 #active-events #child2 .all-polls{
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.all-polls div{
+#all{
+    width: 100%;
     margin-left: 20px;
 }
+#all p{
+    margin-top: 7px;
+}
 .event-delete{
-    margin-left: 80%;
+    margin-right: 30px;
+    background-color: white;
+    font-size: 10px;
+}
+.event-delete:hover{
+    cursor: pointer;
 }
 
 .all-polls #name{
@@ -148,4 +167,90 @@
 }
 #active-events #child3 div button img{
     height: 40px;
+}
+#crete-pollbox{
+    position: fixed;
+    height: 50vh;
+    width: 42%;
+    margin: auto;
+    top:23%;
+    left: 29%;
+    display: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 7px;
+}
+
+#crete-pollbox h4{
+    margin: 30px;
+    font-size: 19px;
+}
+#crete-pollbox p{
+    margin: 10px 0px 10px 30px;
+    font-size: 19px;
+}
+#date{
+    display: flex;
+    margin: 30px;
+    margin-bottom: 0px;
+}
+#date label{
+    font-size: 20px;
+}
+#start-date{
+    height: 40px;
+    width:30vh;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 19px;
+    border-radius: 7px;
+}
+#end-date{
+    height: 40px;
+    width:30vh;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 19px;
+    border-radius: 7px;
+}
+#end-date-label{
+    margin-left: 50px;
+}
+#poll-name{
+    margin-left: 30px;
+    height: 40px;
+    width: 80%;
+    padding-left: 20px;
+    font-size: 19px;
+    border-radius: 7px;
+}
+#participate{
+     height:40px;
+     width: 50%;
+     margin:30px 10px 0px 30px;
+     font-size: 16px;
+     border-radius: 7px;
+     border: 1px soild grey;
+}
+#cancel{
+    height: 40px;
+    border: none;
+    width: 80px;
+    background-color: white;
+    font-size: 18px;
+}
+#cancel:hover{
+    cursor: pointer;
+}
+#submit{
+    height: 40px;
+    border: none;
+    width: 120px;
+    background-color: rgb(55, 209, 55);
+    font-size: 18px;
+    border-radius: 7px;
+}
+#submit:hover{
+    cursor: pointer;
 }
