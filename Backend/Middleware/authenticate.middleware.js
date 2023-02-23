@@ -9,6 +9,12 @@ const authenticate=(req,res)=>{
         res.send("Login again")
     }
 
+    const blacklistdata=JSON.parse(fs.readFileSync("../blacklist.json","utf-8"))
+
+    if(blacklistdata.includes(token)){
+        return res.send("Login again")
+    }
+
     jwt.verify(token,"NORMAL_SECRET",(err,decoded)=>{
         if(err){
             res.send({"msg":"Please Login first","err":err.message})
