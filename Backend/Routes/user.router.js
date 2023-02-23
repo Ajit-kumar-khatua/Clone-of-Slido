@@ -2,11 +2,19 @@ const express=require("express")
 const {UserModel}=require("../models/user.model")
 const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
-const {authenticate}=require("../Middleware/authenticate.middleware")
+// const {authenticate}=require("../Middleware/authenticate.middleware")
+const fs=require("fs")
+
+
 
 const userRouter=express.Router()
 
 userRouter.use(express.json())
+
+
+
+
+
 
 userRouter.post("/signup",async(req,res)=>{
     const {firstName,lastName,email,password}=req.body
@@ -46,6 +54,22 @@ userRouter.post("/login",async(req,res)=>{
         res.send({"Msg":"Something went wrong"})
     }
 })
+
+
+userRouter.get("/logout",async(req,res)=>{
+    const token=req.headers.authorization?.split(" ")[1]
+    try{
+        const blacklistdata=JSON.parse(fs.readFileSync("../blacklist.json","utf-8"))
+        blacklistdata.push(token)
+        fs.writeFileSync("../blacklist.json",JSON.stringify(blacklistdata))
+        res.send("Logged out successfully")
+    }catch(err){
+        console.log(err)
+        res.send({"Msg":"Something went wrong"})
+    }
+})
+
+
 
 module.exports={
     userRouter
