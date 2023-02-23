@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+.outer{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    background-color: rgb(35,103,166);
+}
+h2{
+    color: antiquewhite;
+    font-size: large;
+    font-weight: 200;
+}
+.store{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    
+}
+ .nav{
+    display: flex;
+    
+} 
+.nav>h2{
+    margin-left: 10px;
+}
+.nav-mid{
+    display: flex;
+    justify-content: space-between;
+
+}
+.nav-mid>h2{
+    margin-left: 10px;
+}
+
+
+.nav-last{
+    margin-left: 200px;
+    margin-right: 60px;
+    /* border: 1px solid green; */
+}
