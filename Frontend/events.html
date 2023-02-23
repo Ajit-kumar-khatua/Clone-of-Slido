@@ -27,49 +27,33 @@
             <h2>Active</h2>
             <button id="create-poll"><i class="fa-solid fa-plus"></i> Create Poll</button>
         </div>
-        <div id="child2" class="all-events">
-            <hr>
-            <div class="all-polls">
-                <button id="calender"><i class="fa-regular fa-calendar"></i></button>
-                <div>
-                    <span id="name">Name</span>
-                    <span id="code">#code</span>
-                    <p>StartDate</p>
-                </div>
-                <button class="event-delete"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <hr>
-            <div class="all-polls">
-                <button id="calender"><i class="fa-regular fa-calendar"></i></button>
-                <div>
-                    <span id="name">Name</span>
-                    <span id="code">#code</span>
-                    <p>StartDate</p>
-                </div>
-                <button class="event-delete"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <hr>
-            <div class="all-polls">
-                <button id="calender"><i class="fa-regular fa-calendar"></i></button>
-                <div>
-                    <span id="name">Name</span>
-                    <span id="code">#code</span>
-                    <p>StartDate</p>
-                </div>
-                <button class="event-delete"><i class="fa-solid fa-trash"></i></button>
-            </div>
-             <hr>
-            <!-- <div class="all-polls">
-                <button id="calender"><i class="fa-regular fa-calendar"></i></button>
-                <div>
-                    <span id="name">Name</span>
-                    <span id="code">#code</span>
-                    <p>StartDate</p>
-                </div>
-                <button class="event-delete"><i class="fa-solid fa-trash"></i></button>
-            </div>  -->
-            <!-- <hr> -->
+        <div id="crete-pollbox">
+            <h4>When do you want to use EasyPoll?</h4>
+            <!-- <form action=""> -->
+                <div id="date">
+                    <div>
+                        <label for="" >Start date</label>
+                        <br>
+                        <input type="date" id="start-date" >
+                    </div>
+                    <div>
+                        <label for="" id="end-date-label">End date</label>
+                        <br>
+                        <input type="date" name="" id="end-date">
+                    </div>
+                </div> 
+                <br>
+                <p>Give Your Poll a name</p>
+                <input type="text" placeholder="Poll Name" id="poll-name">
+                <br>
+                <button id="participate">Anyone with the code or link can participate</button>
+                <button id="cancel">Cancel</button>
+                <button id="submit">Create Poll</button>
+                <!-- <input type="Submit" value="Create Poll" id="submit"> -->
+            <!-- </form> -->
 
+        </div>
+        <div id="child2" class="all-events">
         </div>
         <h3>Run Easy Poll directly from your favorite tool</h3>
 
@@ -92,6 +76,8 @@
             </div>
         </div>
     </div>
+
+    
 
 </body>
 

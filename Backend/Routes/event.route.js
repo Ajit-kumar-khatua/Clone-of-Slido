@@ -18,7 +18,7 @@ eventRouter.post("/add",async (req,res)=>{
     try {
         const event= new EventModel({name,startdate,enddate,code})
         await event.save()
-        res.send("Event Added to DataBase")
+        res.send({"msg":"Event Added to DataBase"})
         
     } catch (error) {
         console.log(error);
@@ -29,7 +29,7 @@ eventRouter.delete("/delete/:id", async (req,res)=>{
      let id= req.params.id
     try {
         let event= await EventModel.findByIdAndDelete({_id:id})
-        res.send("Event Deleted Sucessfully")
+        res.send({"msg":"Event Deleted Sucessfully"})
     } catch (error) {
         console.log(error)
     }
