@@ -356,3 +356,73 @@
 .heading12>h1 {
     font-size: 55px;
 }
+
+.heading13 {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 75px;
+    /* border: 1px solid blue; */
+}
+
+.heading13im {
+    width: 400px;
+}
+
+.heading13im {
+    font-size: 25px;
+}
+
+.heading13img>img {
+    height: 300px;
+}
+
+.heading14 {
+    display: flex;
+    /* justify-self: start; */
+    justify-content: space-evenly;
+    height: 160px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    margin-top: 70px;
+}
+
+.heading14 img {
+    /* width: 80%; */
+    /* align-items: center; */
+    /* padding-left: 70px; */
+    /* margin-right: 20px; */
+
+    margin-top: 15px;
+}
+.heading15{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(57,172,55);
+}
+
+.heading15>h1{
+    /* width: 200px; */
+    text-align: center;
+    align-self: center;
+    color: whitesmoke;
+    padding-top: 150px;
+    font-size: 60px;
+}
+.heading15>button{
+    padding: 15px 30px 15px 30px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+.heading16{
+    text-align: center;
+    font-size: 24px;
+}
