@@ -11,6 +11,15 @@ eventRouter.get("/",async (req,res)=>{
         console.log(error)
     }
 })
+eventRouter.get("/:id",async (req,res)=>{
+    let id=req.params.id
+    try {
+        let events= await EventModel.findOne({_id:id})
+        res.json(events)
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 eventRouter.post("/add",async (req,res)=>{
     let {name,startdate,enddate}=req.body

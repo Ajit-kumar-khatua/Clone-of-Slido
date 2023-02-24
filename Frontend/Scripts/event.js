@@ -1,4 +1,5 @@
 
+
 let navbar= document.getElementById("navbar")
 let baseUrl="http://localhost:8080"
 let allEvents=document.querySelector(".all-events")
@@ -38,10 +39,9 @@ fetchEvent()
 
 function displayEvents(data){
    allEvents.innerHTML=`
-   <hr>
     ${data.map((elem)=>{
         return `
-        <div class="all-polls">
+        <div class="all-polls" id=${elem._id}>
             <button id="calender"><i class="fa-regular fa-calendar"></i></button>
             <div id="all">
                 <span id="name">${elem.name}</span>
@@ -51,8 +51,9 @@ function displayEvents(data){
             </div>
             <button class="event-delete" data-id=${elem._id}>Delete</button>
         </div>
-         <hr>
+        <hr>
         `
+      
     }).join("")}
    `
   //  
@@ -62,6 +63,28 @@ function displayEvents(data){
           deleteEvent(event.target.dataset.id)
       })
    }
+ 
+   let polls=document.querySelectorAll(".all-polls")
+   for(let poll of polls){
+       poll.addEventListener("click",(e)=>{
+            let id=poll.getAttribute('id')
+            getpoll(id)
+       })
+   }
+
+}
+
+async function getpoll(id){
+    try {
+      let res= await fetch(`${baseUrl}/events/${id}`)
+      let data= await res.json()
+      console.log(data)
+      localStorage.setItem("polldata",JSON.stringify(data))
+      window.location.href="./adminpoll.html"
+      
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 async function deleteEvent(id){
