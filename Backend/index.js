@@ -2,10 +2,12 @@ const express = require("express")
 const { connection } = require("./Config/db")
 const { userRouter } = require("./Routes/user.router")
 const {passport}=require("./Config/google-oauth")
+const cors=require("cors")
 
 
 
 const app=express()
+app.use(cors())
 
 app.use("/user",userRouter)
 

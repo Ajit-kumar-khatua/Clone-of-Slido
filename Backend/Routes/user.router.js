@@ -18,11 +18,15 @@ userRouter.use(express.json())
 
 userRouter.post("/signup",async(req,res)=>{
     const {firstName,lastName,email,password}=req.body
+    const usermail=await UserModel.findOne({email})
+        if(usermail){
+            return res.send({msg:"User alredy exists"})
+        }
     try{
         bcrypt.hash(password,5,async(req,hash)=>{
             const user=new UserModel({firstName,lastName,email,password:hash})
             await user.save()
-            res.send("Sign up Successful")
+            res.send({msg:"Sign up Successful"})
         })
     }catch(err){
         console.log(err)
