@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
+    <title>Sign In Page</title>
     <style>
-       
+       /* *{
+        margin:0px;
+        padding:0px
+       } */
         #container{
             width:100%;
             display:flex;
             padding:0px;
             margin:0px;
             font-family: Roboto, sans-serif;
+            height:700px
         }
         #main{
 
@@ -34,14 +38,16 @@
             width:35%;
             background-color:  rgb(57, 174, 55);
             display: flex;
-            justify-content: center;
+            justify-content: end;
+            padding-right: 50px;
             margin: -7px 0px -7px -7px;
+
         }
         #cont>div{
             align-self: center;
             color: white;
             font-weight: 600;
-
+            
         }
         #cont>div>input{
             width:110%;
@@ -49,7 +55,6 @@
             border-radius: 30px;
             font-size: 120%;
             border: 0px;
-
         }
 
         #moj>button{
@@ -138,13 +143,24 @@
             color: rgb(0, 0, 0)
         }
 
-        #main>div>p{
+        #cont>div>p~p{
             text-align: center;
             font-family: Roboto, sans-serif;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 400;
             line-height: normal;
-            color: rgb(94, 94, 94)
+            color: rgb(249, 245, 245)
+        }
+        #cont>div>button{
+            padding:15px;
+            width:75%;
+            border-radius: 10px;
+            border:0px;
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: black;
         }
         a{
     text-decoration: none;
@@ -157,18 +173,26 @@
     <div id="container">
         <div id="cont">
             <div>
-                <h1>Joining as a<br> participant?</h1>
+                <h1>Introducing meeting<br> engagement scores</h1>
                 <p>No account needed.</p>
-                <input type="text" placeholder="# Enter event code">
+                <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOO6t__WbXHY5WaeA6k-g-c8e_y2GL98sD7A&usqp=CAU" alt="">
+                <p>Ever wanted to track and compare the level <br>of engagement at your meetings? Now you <br>can - with our improved meeting analytics.</p>
+                <button>Learn More</button>
             </div>
+
+
+
+           
+
             
         </div>
         <div id="main">
             <img  src="https://i.postimg.cc/CxR1gNrm/Easypoll.jpg" alt="">
             <div>
                 
-                <h1>Sign up <br>as a meeting host </h1>
-                <h4>Or <a href="signin.html">Login to your account</a></h4>
+                <h1>Log in <br>
+                    to your account </h1>
+                <h4>Haven’t signed up yet? <a href="signup.html">Create account</a></h4>
                 
                 
                     <button>Signup with Webex</button>
@@ -179,24 +203,14 @@
                 <h5>or</h5>
 
                 <div id="moj">
-                    <div>
-                        <div>
-                            <input id="fname" type="text" placeholder="First name*">
-                            <hr>
-                        </div>
-                        <div>
-                            <input id="lname" type="text" placeholder="Last name*">
-                            <hr>
-                        </div>
-                    </div>
-                    <input id="email" type="email" placeholder="Your work email*">
+                    <input _ngcontent-arr-c82="" autocomplete="email" id="email" inputautofocus="" matinput="" placeholder="Email" required="" type="email" class="mat-input-element mat-form-field-autofill-control ng-tns-c40-0 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched" aria-required="true" data-placeholder="Email" aria-describedby="mat-error-1">
                     <hr>
-                    <input id="password" type="password" placeholder="Password*">
+                    <input _ngcontent-arr-c82="" autocomplete="password" id="password" inputautofocus="" matinput="" placeholder="Password" required="" type="password" class="mat-input-element mat-form-field-autofill-control ng-tns-c40-0 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched" aria-required="true" data-placeholder="Password" aria-describedby="mat-error-1">
                     <hr>
-                    <button id="button">Create account</button>
+                    <button id="sub">Log in</button>
                 </div>
 
-                <p>By signing up you agree with our terms & conditions</p>
+                
             </div>
             
 
@@ -206,25 +220,26 @@
 </body>
 </html>
 <script>
-    document.querySelector("#button").addEventListener("click",register)
+    document.querySelector("#sub").addEventListener("click",login)
 let reg_data={}
-async function register(event){
+async function login(event){
     event.preventDefault()
     try{
-        let firstName=document.querySelector("#fname").value
-        let lastName=document.querySelector("#lname").value
+      
+       
         let email=document.querySelector("#email").value
         let password=document.querySelector("#password").value
-        
-
-
-        reg_data={firstName,lastName,email,password}
-
+        // if(email=="user@admin" && password=="admin"){
+        //     window.location="admin.html";
+        //     return
+        // }
+        reg_data={email,password}
         reg_data=JSON.stringify(reg_data)
 
+
         
 
-            let regURL="http://localhost:9000/user/signup"
+        let regURL="http://localhost:9000/user/login"
 
         let response= await fetch(regURL,{
             method:"POST",
@@ -233,12 +248,20 @@ async function register(event){
                 "Content-Type":"application/json"
             }
         })
-
+        
         let data=await response.json()
-            alert(data.msg)
-            window.location=("signin.html")
+       
+            window.location=("events.html")
+            alert("Login Successful")
+            console.log("Loged In")
+            console.log(data)
+        
+     
+
     }catch(err){
         console.log(err)
     }
+
+     
 }
 </script>
