@@ -120,7 +120,8 @@ body{
     margin-left: 20px;
 }
 #all p{
-    margin-top: 7px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 .event-delete{
     margin-right: 30px;
@@ -129,6 +130,11 @@ body{
 }
 .event-delete:hover{
     cursor: pointer;
+}
+.all-polls{
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 .all-polls #name{
