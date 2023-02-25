@@ -41,9 +41,9 @@ function displayEvents(data){
    allEvents.innerHTML=`
     ${data.map((elem)=>{
         return `
-        <div class="all-polls" id=${elem._id}>
+        <div class="all-polls" >
             <button id="calender"><i class="fa-regular fa-calendar"></i></button>
-            <div id="all">
+            <div id="all" class=${elem._id}>
                 <span id="name">${elem.name}</span>
                 <span id="code">#${elem.code}</span>
                 <p> <b>Start Date:- </b> ${elem.startdate}</p>
@@ -64,10 +64,11 @@ function displayEvents(data){
       })
    }
  
-   let polls=document.querySelectorAll(".all-polls")
+   let polls=document.querySelectorAll("#all")
+   
    for(let poll of polls){
        poll.addEventListener("click",(e)=>{
-            let id=poll.getAttribute('id')
+            let id=poll.getAttribute('class')
             getpoll(id)
        })
    }
