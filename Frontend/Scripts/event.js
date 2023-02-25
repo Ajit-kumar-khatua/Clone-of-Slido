@@ -16,9 +16,6 @@ function createnav(){
         <button >AK</button>
     </div>
      `
-
-  
-
 }
 createnav()
 
