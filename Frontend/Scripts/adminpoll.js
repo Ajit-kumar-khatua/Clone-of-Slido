@@ -107,3 +107,28 @@ function displaypoll(data){
     }
     displayResponse()
 }
+
+const socket = io("http://localhost:8080/" , {transports : ["websocket"]})
+
+let room=pollData.code+""
+
+socket.emit("joinRoom",{room})
+socket.on("message",async (msg)=>{
+    let allResponse=document.getElementById("all-response")
+    let obj={code:room,response:msg}
+    try {
+        let res=await fetch(`${baseUrl}/polls/response/add`,{
+            method:"POST",
+            body:JSON.stringify(obj),
+            headers:{
+                "Content-Type":"Application/json"
+            }
+        })
+        let data=await res.json()
+        showpolltext()
+        
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
