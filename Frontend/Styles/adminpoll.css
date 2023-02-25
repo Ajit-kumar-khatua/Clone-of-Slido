@@ -179,11 +179,24 @@
 #live-polls #child3 h3{
     margin:30px 0px 10px 30px
 }
-#live-polls #child3 h4{
-    margin:30px 0px 10px 30px
+#live-polls #child3 h2{
+    margin:10px 0px 10px 30px
 }
 #live-polls #child3 p{
     margin:0px 0px 10px 30px;
     font-size: 19px;
     color: grey;
+}
+#live-polls #child3 #one-res{
+   display: flex;
+}
+#live-polls #child3 div span{
+    margin:0px 0px 0px 20px;
+    font-size: 14px;
+    color: grey;
+}
+#all-response i{
+    font-size: 20px; 
+    margin-top: 8px;
+    margin-left: 30px;
 }

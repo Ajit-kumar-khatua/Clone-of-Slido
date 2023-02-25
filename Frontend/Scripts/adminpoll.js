@@ -35,8 +35,75 @@ launchBtn.addEventListener("click",async ()=>{
         })
         let data=await res.json()
         console.log(data)
+        window.location.href="./adminpoll.html"
         
      } catch (error) {
         console.log(error)
      }
 })
+let code=pollData.code
+
+let uniqueCode=document.getElementById("code")
+ uniqueCode.innerText=`Your participants can interact with your Slido
+                        event by joining at Slido.com with the code
+                        #${code}`
+let polltext=document.querySelector("#live-polls #child3")
+let polltext1=document.querySelector("#live-polls #child1")
+
+
+async function showpolltext(){
+    try {
+        let res=await fetch(`${baseUrl}/polls/${code}`)
+        let data=await res.json()
+        if(data.length==0){
+           polltext1.style.display="block"
+           polltext.style.display="none"
+        }else{
+            displaypoll(data)
+        }
+       
+    } catch (error) {
+        console.log(error)
+    }
+}
+showpolltext()
+
+function displaypoll(data){
+    polltext.innerHTML=`
+      ${data.map((elem)=>{
+         return `
+         <h3><i class="fa-regular fa-message" style="margin-right: 7px;"></i> Open Text Poll</h3>
+         <p>Poll for: ${elem.polls}?</p>
+         <hr>
+         <h2>Responses</h2>
+         <div id="all-response">
+         </div>
+         `
+      })}
+    `
+    let allResponse=document.getElementById("all-response")
+    async function displayResponse(){
+      try {
+        let res= await fetch(`${baseUrl}/polls/response/${code}`)
+        let data= await res.json()
+         allResponse.innerHTML=`
+          ${data.map((elem)=>{
+              return `
+              <div id="one-res">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                    <span>Anonymous</span>
+                    <br>
+                    <span>${elem.response}</span>
+                </div>
+              </div>
+              `
+          })}
+         `
+        
+      } catch (error) {
+          console.log(error)
+      }
+    }
+    displayResponse()
+}
