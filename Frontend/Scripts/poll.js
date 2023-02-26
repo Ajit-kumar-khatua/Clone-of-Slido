@@ -11,7 +11,7 @@ let responseForm=document.getElementById("response-form")
 
 
 
-const socket = io("http://localhost:8080/" , {transports : ["websocket"]})
+const socket = io("https://polleasy.onrender.com/" , {transports : ["websocket"]})
 
 socket.emit("joinRoom",{room})
 
