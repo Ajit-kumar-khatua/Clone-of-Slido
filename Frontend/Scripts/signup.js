@@ -19,7 +19,7 @@ async function register(event){
 
         
 
-            let regURL="http://localhost:9000/user/signup"
+            let regURL="https://polleasy.onrender.com/users/signup"
 
         let response= await fetch(regURL,{
             method:"POST",

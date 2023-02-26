@@ -44,7 +44,7 @@ body{
     border: none;
     border-radius: 7px;
     padding-left: 15px;
-    font-size: 19px;
+    font-size: 16px;
 }
 #child2 button{
     height: 40px;
@@ -176,8 +176,8 @@ body{
 }
 #crete-pollbox{
     position: fixed;
-    height: 50vh;
-    width: 42%;
+    height: 55vh;
+    width: 43%;
     margin: auto;
     top:23%;
     left: 29%;
@@ -189,11 +189,11 @@ body{
 
 #crete-pollbox h4{
     margin: 30px;
-    font-size: 19px;
+    font-size: 18px;
 }
 #crete-pollbox p{
     margin: 10px 0px 10px 30px;
-    font-size: 19px;
+    font-size: 18px;
 }
 #date{
     display: flex;
@@ -210,6 +210,7 @@ body{
     padding-left: 20px;
     font-size: 19px;
     border-radius: 7px;
+    border: 1px solid grey;
 }
 #end-date{
     height: 40px;
@@ -219,6 +220,7 @@ body{
     padding-left: 20px;
     font-size: 19px;
     border-radius: 7px;
+    border: 1px solid grey;
 }
 #end-date-label{
     margin-left: 50px;
@@ -230,14 +232,15 @@ body{
     padding-left: 20px;
     font-size: 19px;
     border-radius: 7px;
+    border: 1px solid grey;
 }
 #participate{
      height:40px;
-     width: 50%;
-     margin:30px 10px 0px 30px;
+     width: 55%;
+     margin:29px 10px 0px 30px;
      font-size: 16px;
      border-radius: 7px;
-     border: 1px soild grey;
+     border:1px solid grey;
 }
 #cancel{
     height: 40px;
@@ -256,6 +259,7 @@ body{
     background-color: rgb(55, 209, 55);
     font-size: 18px;
     border-radius: 7px;
+    margin-top: 10px;
 }
 #submit:hover{
     cursor: pointer;

@@ -1,6 +1,6 @@
 let navbar= document.getElementById("navbar")
 let pollData=JSON.parse(localStorage.getItem("polldata"))
-let baseUrl="http://localhost:8080"
+let baseUrl="https://polleasy.onrender.com"
 
 function createnav(){
     navbar.innerHTML=
@@ -108,7 +108,7 @@ function displaypoll(data){
     displayResponse()
 }
 
-const socket = io("http://localhost:8080/" , {transports : ["websocket"]})
+const socket = io("https://polleasy.onrender.com/" , {transports : ["websocket"]})
 
 let room=pollData.code+""
 

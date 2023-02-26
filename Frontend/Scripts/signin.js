@@ -30,7 +30,7 @@ async function login(event){
 
         
 
-        let regURL="http://localhost:9000/user/login"
+        let regURL="https://polleasy.onrender.com/users/login"
 
         let response= await fetch(regURL,{
             method:"POST",
@@ -44,7 +44,9 @@ async function login(event){
        
             window.location=("events.html")
             alert("Login Successful")
-            console.log("Loged In")
+            localStorage.setItem("token",data.token)
+            localStorage.setItem("firstName",data.firstname)
+            localStorage.setItem("lastName",data.lastName)
             console.log(data)
         
      

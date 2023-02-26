@@ -1,19 +1,23 @@
 
 
 let navbar= document.getElementById("navbar")
-let baseUrl="http://localhost:8080"
+let baseUrl="https://polleasy.onrender.com"
 let allEvents=document.querySelector(".all-events")
+let token=localStorage.getItem("token")
+let firstName=localStorage.getItem("firstName")
+let lastName=localStorage.getItem("lastName")
+
 
 function createnav(){
      navbar.innerHTML=
      `
      <div id="child1">
-        <a href="#">Ajit Kumar Organisation</a>
+        <a href="#">${firstName}'s Organisation</a>
      </div>
     <div id="child2">
         <input type="search" id="search" placeholder="Search Event">
         <a href="#">What's new</a>
-        <button >AK</button>
+        <button >${firstName[0]+lastName[0]}</button>
     </div>
      `
 }
@@ -21,7 +25,12 @@ createnav()
 
 async function fetchEvent(){
   try {
-    let res= await fetch(`${baseUrl}/events`)
+    let res= await fetch(`${baseUrl}/events`,{
+      method:"GET",
+      headers:{
+        Authorization: token
+      }
+    })
     let data= await res.json()
     console.log(data)
     displayEvents(data)
@@ -107,7 +116,7 @@ let pollBox=document.getElementById("crete-pollbox")
 createPollBtn.addEventListener("click",()=>{
  
     pollBox.style.display="block"
-    body.style.opacity="0.8"
+    body.style.opacity="1"
     pollBox.style.opacity="1"
 })
 
@@ -139,7 +148,8 @@ async function addPoll(obj){
       method:"POST",
       body:JSON.stringify(obj),
       headers:{
-        "Content-Type":"Application/json"
+        "Content-Type":"Application/json",
+        Authorization: token
       }
     })
     let data=await res.json()
