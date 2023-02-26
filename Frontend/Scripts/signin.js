@@ -3,7 +3,7 @@ document.querySelector(".but2").addEventListener("click",oauth)
 
 async function oauth(event){
     event.preventDefault()
-        window.location=("./auth/google")
+        window.location=("http://localhost:9000/auth/google")
        
 }
 let reg_data={}

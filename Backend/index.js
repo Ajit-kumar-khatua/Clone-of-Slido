@@ -3,7 +3,13 @@ const { connection } = require("./Config/db")
 const { userRouter } = require("./Routes/user.router")
 const {passport}=require("./Config/google-oauth")
 const cors=require("cors")
-
+const path = require("path");
+const filePath = path.join(
+  __dirname,
+  "..",
+  "Frontend",
+  "signup.html"
+);
 
 
 const app=express()
@@ -20,7 +26,7 @@ app.get('/auth/google',
   function(req, res) {
     // Successful authentication, redirect home.
     console.log(req.user)
-    res.redirect('/');
+    res.sendFile(filePath);
   });
 
 app.get("/",(req,res)=>{

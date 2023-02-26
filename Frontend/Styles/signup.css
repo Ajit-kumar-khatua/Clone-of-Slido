@@ -51,7 +51,7 @@
     margin-bottom: 15px;
     border:0px;
     background-color: rgb(57, 174, 55);
-    color: white;
+    /* color: white; */
 }
 #moj>input{
     width:85%;
@@ -112,7 +112,7 @@ h5{
     font-weight: 500;
     line-height: 20px;
     color: rgb(0, 0, 0.8);
-    background-color: white;
+    /* background-color: white; */
 }
 #main>div>h1{
     font-family: Roboto, sans-serif;
@@ -141,4 +141,24 @@ a{
 text-decoration: none;
 color: rgb(57, 127, 241);
 font-weight: 600;
+}
+
+
+/* #sub:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+} */
+#button:hover{
+    cursor: pointer;
+    color:white;
+    background-color: rgb(0, 0, 0);
+ 
+}
+.but2:hover{
+    cursor: pointer;
+    background-color: rgb(230, 230, 230)
+}
+.but3:hover{
+    cursor: pointer;
+    background-color: rgb(230, 230, 230)
 }
