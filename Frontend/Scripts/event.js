@@ -18,8 +18,14 @@ function createnav(){
         <input type="search" id="search" placeholder="Search Event">
         <a href="#">What's new</a>
         <button >${firstName[0]+lastName[0]}</button>
+        <a href="./index.html" id="logout">Logout</a>
     </div>
      `
+
+     let logout=document.getElementById("logout")
+     logout.addEventListener("click",()=>{
+         localStorage.clear()
+     })
 }
 createnav()
 
@@ -173,3 +179,5 @@ function searchEvents(data){
       displayEvents(searchedData)
    })
 }
+
+
