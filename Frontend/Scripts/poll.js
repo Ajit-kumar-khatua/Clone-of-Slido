@@ -35,6 +35,8 @@ async function getpoll(){
             method: "GET"
         })
         let data=await res.json()
+        // let store=data[0].polls
+        displaydata(data)
         console.log(data[0].polls)
         
     } catch (error) {
@@ -42,3 +44,14 @@ async function getpoll(){
     }
 }
 getpoll()
+
+const question =document.querySelector(".question")
+
+function displaydata(data){
+    let div=document.createElement("div");
+    let h3= document.createElement("h3");
+    h3.innerText= data[0].polls;
+    div.append(h3);
+    question.append(div);
+
+}
