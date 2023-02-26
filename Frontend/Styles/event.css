@@ -32,7 +32,7 @@ body{
 #navbar #child2 a{
     color: white;
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-right: 10px;
     text-decoration: none;
 }
@@ -45,6 +45,14 @@ body{
     border-radius: 7px;
     padding-left: 15px;
     font-size: 16px;
+}
+#logout{
+    /* border: 1px solid white; */
+    padding: 7px;
+    background-color:rgb(55, 209, 55) ;
+    color: white;
+    margin-left: 50px;
+    border-radius: 7px;
 }
 #child2 button{
     height: 40px;
