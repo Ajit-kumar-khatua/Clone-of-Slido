@@ -127,6 +127,9 @@ body{
     width: 100%;
     margin-left: 20px;
 }
+#all:hover{
+    cursor: pointer;
+}
 #all p{
     margin-top: 10px;
     font-size: 12px;
