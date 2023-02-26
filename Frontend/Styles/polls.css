@@ -41,3 +41,42 @@ h2{
     margin-right: 60px;
     /* border: 1px solid green; */
 }
+
+.question{
+    width: 300px;
+    height: 130px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid aqua;
+    color: lightcoral;
+    background-color: whitesmoke;
+    margin-top: 200px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.display{
+    width: 300px;
+    height: 60px;
+  
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+  
+}
+#response-form{
+    display: flex;
+    flex-direction: column;
+}
+ #res{
+    width: 300px;
+    height: 40px;
+}
+#sub{
+  width: 100px;
+  height: 30px;
+   margin-top: 10px;
+   margin-left: 100px;
+   border-radius: 6px;
+   border: 1px solid yellowgreen;
+}
