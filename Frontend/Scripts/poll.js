@@ -27,6 +27,8 @@ responseForm.addEventListener("submit",(event)=>{
     event.preventDefault()
     let res=document.getElementById("res").value;
     socket.emit("response",res)
+    alert("Response Added")
+    res=""
 })
 
 async function getpoll(){
@@ -50,7 +52,7 @@ const question =document.querySelector(".question")
 function displaydata(data){
     let div=document.createElement("div");
     let h3= document.createElement("h3");
-    h3.innerText= data[0].polls;
+    h3.innerText= data[0].polls+"?";
     div.append(h3);
     question.append(div);
 

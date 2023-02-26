@@ -159,7 +159,7 @@ async function addPoll(obj){
       }
     })
     let data=await res.json()
-    alert(data.msg)
+    alert("Event Created")
     pollBox.style.display="none"
     fetchEvent()
     body.style.opacity="1"
