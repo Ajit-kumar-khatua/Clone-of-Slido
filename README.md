@@ -19,6 +19,10 @@ Original Website Link:- https://www.slido.com/
 
 <h2>Home Page</h2>
   <img src="https://www.linkpicture.com/q/Home-Page.png" type="image">
+<h2>Signup Page</h2>
+  <img src="https://www.linkpicture.com/q/Signup-Page.png" type="image">
+<h2>Login Page</h2>
+  <img src="https://www.linkpicture.com/q/Login-Page.png" type="image">
 <h2>Events Page</h2>
   <img src="https://www.linkpicture.com/q/Event-Page.png" type="image">
   
