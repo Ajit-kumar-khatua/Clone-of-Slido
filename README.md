@@ -25,5 +25,7 @@ Original Website Link:- https://www.slido.com/
   <img src="https://www.linkpicture.com/q/Login-Page.png" type="image">
 <h2>Events Page</h2>
   <img src="https://www.linkpicture.com/q/Event-Page.png" type="image">
+<h2>Poll Page</h2>
+  <img src="https://www.linkpicture.com/q/Create-Poll.png" type="image">
   
   
