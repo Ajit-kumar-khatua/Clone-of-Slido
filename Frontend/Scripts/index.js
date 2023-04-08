@@ -1,4 +1,20 @@
 
+let ham= document.querySelector(".ham");
+let menu= document.querySelector("#complete");
+
+
+ham.addEventListener("click",showmenu);
+let tog=false;
+
+function showmenu(){
+    tog=!tog;
+    tog?menu.style.display = "flex":menu.style.display = "none";
+
+
+// console.log(1)
+}
+
+
 
 
 let codeBtn=document.getElementById("code-btn")
