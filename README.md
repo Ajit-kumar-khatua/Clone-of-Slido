@@ -5,7 +5,7 @@ This is the clone of Slido.com.
 <br>
 <br>
 
-Deployed Link:- https://polleasy231.netlify.app/
+Deployed Link:- https://profound-pasca-9482d8.netlify.app/
 <br>
 Original Website Link:- https://www.slido.com/
 
