@@ -1,4 +1,26 @@
 
+ let startday=document.querySelector("#start-date");
+let endday= document.querySelector("#end-date");
+console.log(endday);
+
+startday.addEventListener("input",()=>{
+
+  let val=startday.value;
+  // console.log(val);
+  
+ 
+if(val!==undefined){
+  endday.setAttribute("min",val)
+
+}else{
+  endday.setAttribute("min",null);
+}
+})
+
+
+
+
+
 
 let navbar= document.getElementById("navbar")
 let baseUrl="https://polleasy.onrender.com"

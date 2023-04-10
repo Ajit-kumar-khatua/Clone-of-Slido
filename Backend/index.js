@@ -8,7 +8,7 @@ const filePath = path.join(
   __dirname,
   "..",
   "Frontend",
-  "signup.html"
+  "events.html"
 );
 
 
@@ -26,7 +26,16 @@ app.get('/auth/google',
   function(req, res) {
     // Successful authentication, redirect home.
     console.log(req.user)
-    res.sendFile(filePath);
+    // res.json(req.user)
+    const user = req.user;
+    res.sendFile(filePath, function (err) {
+      if (err) {
+        console.log(err)
+        res.status(500).send(err)
+      } else {
+        res.status(200).json(user)
+      }
+    });
   });
 
 app.get("/",(req,res)=>{
