@@ -12,7 +12,7 @@ Original Website Link:- https://www.slido.com/
 <h1>Tech Stacks used</h1>
 
 <p>FrontEnd:- HTML,CSS,JavaScript</p>
-<p>Backend:- NODE JS, Express,Socket.io </p>
+<p>Backend:- NODE JS, Express, Socket.io </p>
 <p>Database:- MongoDB</p>
 
 <h1>Screenshots<h1>
