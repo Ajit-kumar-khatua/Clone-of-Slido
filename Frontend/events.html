@@ -8,6 +8,7 @@
     <title>Events</title>
     <link rel="stylesheet" href="./Styles/event.css">
     <script src="https://kit.fontawesome.com/3e90fa2a97.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -82,4 +83,25 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    $(function(){
+        var dtToday = new Date();
+     
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
+        if(month < 10)
+            month = '0' + month.toString();
+        if(day < 10)
+         day = '0' + day.toString();
+        var maxDate = year + '-' + month + '-' + day;
+        $('#start-date').attr('min', maxDate);
+        
+        // $('#end-date').attr('min', maxDate);
+    });
+    </script>
+
+
+
 <script src="./Scripts/event.js"></script>

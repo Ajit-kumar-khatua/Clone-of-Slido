@@ -2,6 +2,7 @@ const mongoose=require("mongoose")
 
 const responseSchema=mongoose.Schema({
     code:String,
+    name:string,
     response:String
 })
 

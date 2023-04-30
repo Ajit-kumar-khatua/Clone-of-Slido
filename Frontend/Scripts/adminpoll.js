@@ -50,6 +50,18 @@ let uniqueCode=document.getElementById("code")
 let polltext=document.querySelector("#live-polls #child3")
 let polltext1=document.querySelector("#live-polls #child1")
 
+let btn= document.querySelector("#present");
+
+btn.addEventListener("click",copy);
+
+function copy(){
+    let text=document.querySelector("#code").innerText;
+    
+    text=text.split("#")[1];
+    // console.log(text);
+    navigator.clipboard.writeText(text);
+    alert(`Text Copied ${text}`)
+}
 
 async function showpolltext(){
     try {
@@ -92,7 +104,7 @@ function displaypoll(data){
               <div id="one-res">
                 <i class="fa-solid fa-user"></i>
                 <div>
-                    <span>Anonymous</span>
+                    <span>${elem.name}</span>
                     <br>
                     <span>${elem.response}</span>
                 </div>
@@ -115,7 +127,8 @@ let room=pollData.code+""
 socket.emit("joinRoom",{room})
 socket.on("message",async (msg)=>{
     let allResponse=document.getElementById("all-response")
-    let obj={code:room,response:msg}
+    let obj={code:room,response:msg.res,name:msg.name};
+    // console.log(obj);
     try {
         let res=await fetch(`${baseUrl}/polls/response/add`,{
             method:"POST",
