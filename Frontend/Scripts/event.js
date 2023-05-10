@@ -17,6 +17,21 @@ if(val!==undefined){
 }
 })
 
+checkURL()
+function checkURL(){
+   let urlParams=new URLSearchParams(window.location.search)
+   const paramToken= urlParams.get("id")
+   const paramFirstName=urlParams.get("first_name")
+   const paramLastName=urlParams.get("last_name")
+   
+   if(paramToken && paramFirstName && paramLastName){
+     localStorage.setItem("token",paramToken)
+     localStorage.setItem("firstName",paramFirstName)
+     localStorage.setItem("lastName",paramLastName)
+   }
+}
+
+
 
 
 
