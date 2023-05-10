@@ -1,4 +1,22 @@
 
+function checkURL(){
+  let urlParams=new URLSearchParams(window.location.search)
+  const paramToken= urlParams.get("id")
+  const paramFirstName=urlParams.get("first_name")
+  const paramLastName=urlParams.get("last_name")
+  console.log(urlParams,paramToken,paramFirstName,paramLastName)
+  
+  if(paramToken && paramFirstName && paramLastName){
+    localStorage.setItem("token",paramToken)
+    localStorage.setItem("firstName",paramFirstName)
+    localStorage.setItem("lastName",paramLastName)
+  }
+}
+
+
+checkURL()
+
+
  let startday=document.querySelector("#start-date");
 let endday= document.querySelector("#end-date");
 console.log(endday);
@@ -17,19 +35,7 @@ if(val!==undefined){
 }
 })
 
-checkURL()
-function checkURL(){
-   let urlParams=new URLSearchParams(window.location.search)
-   const paramToken= urlParams.get("id")
-   const paramFirstName=urlParams.get("first_name")
-   const paramLastName=urlParams.get("last_name")
-   
-   if(paramToken && paramFirstName && paramLastName){
-     localStorage.setItem("token",paramToken)
-     localStorage.setItem("firstName",paramFirstName)
-     localStorage.setItem("lastName",paramLastName)
-   }
-}
+
 
 
 
