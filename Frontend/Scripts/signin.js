@@ -1,5 +1,5 @@
 document.querySelector("#sub").addEventListener("click",login)
-document.querySelector(".but2").addEventListener("click",oauth)
+
 
 
 let reg_data={}

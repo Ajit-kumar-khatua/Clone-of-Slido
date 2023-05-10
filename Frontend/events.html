@@ -8,7 +8,7 @@
     <title>Events</title>
     <link rel="stylesheet" href="./Styles/event.css">
     <script src="https://kit.fontawesome.com/3e90fa2a97.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -85,7 +85,7 @@
 </html>
 
 <script type="text/javascript">
-    $(function(){
+    // $(function(){
         var dtToday = new Date();
      
         var month = dtToday.getMonth() + 1;
@@ -96,10 +96,15 @@
         if(day < 10)
          day = '0' + day.toString();
         var maxDate = year + '-' + month + '-' + day;
-        $('#start-date').attr('min', maxDate);
+        // $('#start-date').attr('min', maxDate);
+        window.onload(
+            document.getElementById("start-date").setAttribute('min',maxDate),
+            // console.log(maxDate>`2023-02-13`,"hello")
+        )
+        
         
         // $('#end-date').attr('min', maxDate);
-    });
+    //  });
     </script>
 
 
