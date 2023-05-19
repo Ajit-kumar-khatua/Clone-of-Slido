@@ -1,5 +1,7 @@
 let baseUrl = "https://polleasy.onrender.com";
 
+
+
 let ham= document.querySelector(".ham");
 let menu= document.querySelector("#complete");
 
@@ -15,20 +17,24 @@ function showmenu(){
 // console.log(1)
 }
 
-async function getpoll() {
+async function getpoll(code) {
     try {
-      let res = await fetch(`${baseUrl}/polls`, {
+      let res = await fetch(`${baseUrl}/polls/${code}`, {
         method: "GET",
       });
       let data = await res.json();
-      // let store=data[0].polls
-     
-      console.log(data[0].polls);
+      if(data.length!=0){
+        localStorage.setItem("roomno",JSON.stringify(+code))
+        window.location.href="./polls.html"
+      }else{
+        alert("Invalid Input")
+      }
+        
     } catch (error) {
       console.log(error);
     }
   }
-  getpoll();
+  
 
 
 
@@ -40,7 +46,9 @@ codeBtn.addEventListener("click",()=>{
     if(code==""){
         alert("Invalid Input")
         return
+    }else{
+      getpoll(code)
+      
     }
-    localStorage.setItem("roomno",JSON.stringify(+code))
-    window.location.href="./polls.html"
+    
 })

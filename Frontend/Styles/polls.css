@@ -72,11 +72,17 @@ h2 {
 #name{
   width: 300px;
   height: 40px;
-  margin-bottom:6px;
+  margin-bottom:10px;
+  border-radius: 7px;
+  font-size: 17px;
+  border: 1px solid;
 }
 #res {
   width: 300px;
   height: 40px;
+  border-radius: 7px;
+  font-size: 17px;
+  border: 1px solid;
 }
 #sub {
   width: 100px;
