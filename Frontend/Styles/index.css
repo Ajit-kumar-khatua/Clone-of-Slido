@@ -71,6 +71,10 @@
   margin-left: 30px;
   color: rgb(112, 112, 112);
   text-decoration: none;
+  background-color: rgb(57, 172, 55);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
 }
 
 a:link {
@@ -97,7 +101,7 @@ a:visited {
   height: 60px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   text-align: center;
   border: 1px solid blue;
   border-radius: 20px;
@@ -106,36 +110,32 @@ a:visited {
 }
 
 .heading1 h1 {
-  margin-left: 40px;
+  margin-left: 10px;
   color: antiquewhite;
   font-size: 25px;
 }
 
-/* .heading1 button {
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    height: 40px;
-    margin-right: 20px;
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-    margin: auto;
 
-} */
 #code {
   width: 250px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 50px;
+  border: none;
+  margin-left: 20px;
+ 
 }
 
 #code-btn {
-  /* margin-right: 80px; */
-  /* width: 400px; */
-  height: 43px;
-  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color:white;
+  background-color: rgb(26, 115, 232);
+  margin-left: 10px;
+}
+#code-btn i{
+  color: white;
 }
 
 .heading2 {
@@ -559,22 +559,20 @@ a:visited {
     width: auto;
 
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: auto;
     margin-left: 15px;
   }
 
   #code {
     /* width: 375px; */
-    height: 70px;
+    height: 40px;
   }
 
   #code-btn {
     /* width: 380px; */
-    height: 70px;
-    display: flex;
-    justify-content: end;
-    /* border:1px solid red */
+    height: 40px;
+   
   }
 
   #code-btn p i {
@@ -798,23 +796,19 @@ a:visited {
   .heading1 {
     /* text-align: center; */
     width: auto;
-
     display: flex;
-    flex-direction: column;
     height: auto;
     margin-left: 15px;
   }
 
   #code {
     /* width: 375px; */
-    height: 70px;
+    height: 40px;
   }
 
   #code-btn {
     /* width: 380px; */
-    height: 70px;
-    display: flex;
-    justify-content: end;
+    height: 40px;
     /* border:1px solid red */
   }
 
